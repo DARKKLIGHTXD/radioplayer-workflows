@@ -99,7 +99,7 @@ install_dependencies(){
 should_start(){
     echo "Getting Started..."
     git clone https://github.com/AsmSafone/RadioPlayerV3
-    cd Ultroid
+    cd AsmSafone
     clear
 
     read -p "Should I start the bot? Yes/No: " start;
