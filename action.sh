@@ -11,12 +11,9 @@ FROM debian:latest
 git clone https://github.com/AsmSafone/RadioPlayerV3.git /root/AsmSafone/ 
 cd RadioPlayerV3
 pip3 install -U -r requirements.txt
-/root/AsmSafone/ 
-RUN cd /
-RUN pip3 install -U -r requirements.txt
-RUN mkdir /RadioPlayerV3
-WORKDIR /RadioPlayerV3
-COPY start.sh /start.sh
-CMD ["/bin/bash", "/start.sh"]
+virtualenv -p /usr/bin/python3 venv 
+. ./venv/bin/activate
+python3 main.py
+["/bin/bash", "/start.sh"]
 
 
