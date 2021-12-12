@@ -10,8 +10,7 @@ npm i -g npm
 branch=master
 git clone -b $branch https://github.com/ZDARKSHADOWXD/RadioPlayerV33.git /root/ZDARKSHADOWXD/ 
 cp RadioPlayerV3/.env /root/ZDARKSHADOWXD/.env
-cd /root/ZDARKSHADOWXD
 pip3 install -U -r requirements.txt
-docker build . --rm --force-rm --compress --pull --file Dockerfile -t RadioPlayerV33
-docker run --privileged --env-file .env --rm -i RadioPlayerV33
+docker build . --rm --force-rm --compress --pull --file Dockerfile -t ZDARKSHADOWXD
+docker run --privileged --env-file .env --rm -i ZDARKSHADOWXD
 
