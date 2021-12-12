@@ -13,7 +13,6 @@ cd RadioPlayerV3
 pip3 install -U -r requirements.txt
 cp RadioPlayerV3/.env /root/ZDARKSHADOWXD/.env
 cd /root/ZDARKSHADOWXD
-python3 main.py
-["/bin/bash", "/start.sh"]
-
+docker build . --rm --force-rm --compress --pull --file Dockerfile -t RadioPlayerV33
+docker run --privileged --env-file .env --rm -i RadioPlayerV33
 
