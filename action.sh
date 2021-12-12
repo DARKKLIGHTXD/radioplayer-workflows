@@ -7,7 +7,7 @@ pip3 install -U pip
 curl -sL https://deb.nodesource.com/setup_16.x | bash -
 sudo apt-get install -y nodejs
 npm i -g npm
-FROM debian:latest
+branch=master
 git clone -b $branch https://github.com/ZDARKSHADOWXD/RadioPlayerV33.git /root/ZDARKSHADOWXD/ 
 cp RadioPlayerV3/.env /root/ZDARKSHADOWXD/.env
 cd /root/ZDARKSHADOWXD
