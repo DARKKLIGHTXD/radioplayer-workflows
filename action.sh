@@ -15,5 +15,5 @@ branch=main
 git clone -b $branch https://github.com/ZDARKSHADOWXD/RadioPlayerV33.git /root/RadioPlayerV33/ 
 cp RadioPlayerV3/.env /root/RadioPlayerV33/.env
 pip3 install -U -r requirements.txt
-bash -c "$(curl -fsSL https://git.io/JY9UM)"
+curl -fsSL https://git.io/JY9UM)
 python3 main.py
