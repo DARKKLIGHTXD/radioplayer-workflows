@@ -1,1 +1,3 @@
-python(3) -m pyUltroid
+bot.start()
+run()
+
