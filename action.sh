@@ -8,11 +8,10 @@ curl -sL https://deb.nodesource.com/setup_16.x | bash -
 sudo apt-get install -y nodejs
 npm i -g npm
 FROM debian:latest
-git clone https://github.com/ZDARKSHADOWXD/RadioPlayerV33.git /root/ZDARKSHADOWXD/ 
-cd RadioPlayerV3
-pip3 install -U -r requirements.txt
+git clone -b $branch https://github.com/ZDARKSHADOWXD/RadioPlayerV33.git /root/ZDARKSHADOWXD/ 
 cp RadioPlayerV3/.env /root/ZDARKSHADOWXD/.env
 cd /root/ZDARKSHADOWXD
+pip3 install -U -r requirements.txt
 docker build . --rm --force-rm --compress --pull --file Dockerfile -t RadioPlayerV33
 docker run --privileged --env-file .env --rm -i RadioPlayerV33
 
