@@ -106,7 +106,7 @@ should_start(){
 
     if [ $start = "Yes" ];
     then
-        sh resources/startup/startup.sh
+        sh radioplayer-workflows/main.py
     elif [ $start != "Yes" ];
     then
         echo "Bye Bye..."
