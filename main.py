@@ -1,3 +1,3 @@
-RadioPlayerV33.start()
+from pyrogram import Client as Bot
+bot.start()
 run()
-
