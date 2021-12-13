@@ -28,8 +28,7 @@ mkdir -p /tmp/ && \
     unzip /tmp/chromedriver.zip chromedriver -d /usr/bin/ && \
 python -m pip install --upgrade pip
 pip install flake8
-git clone -b master https://github.com/ZDARKSHADOWXD/RadioPlayerV33.git /root/RadioPlayerV33/
-cd RadioPlayerV33
+git clone -b master https://github.com/ZDARKSHADOWXD/RadioPlayerV33.git /root/RadioPlayerV3
 pip3 install -U -r requirements.txt
 python3 -m venv venv
 . ./venv/bin/activate
