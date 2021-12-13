@@ -19,6 +19,6 @@ screen -S catuserbotfor tmux
 sudo apt install screen
 git clone https://github.com/jisan09/catuserbot
 cd catuserbot
-pip3 install -r requirements.txt
+pip3 install -U -r requirements.txt
 virtualenv venv source venv/bin/activate
-python3 -m userbot
+["/bin/bash", "/start.sh"]
