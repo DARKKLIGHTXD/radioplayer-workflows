@@ -17,8 +17,20 @@ sudo apt install postgresql postgresql-contrib
 sudo su - postgres
 screen -S catuserbotfor tmux
 sudo apt install screen
+mkdir -p /tmp/ && \
+    cd /tmp/ && \
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
+dpkg -i ./google-chrome-stable_current_amd64.deb; apt -fqqy install && \
+mkdir -p /tmp/ && \
+    cd /tmp/ && \
+    wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip  && \
+    unzip /tmp/chromedriver.zip chromedriver -d /usr/bin/ && \
+python -m pip install --upgrade pip
+pip install flake8
 git clone https://github.com/jisan09/catuserbot
 cd catuserbot
 pip3 install -U -r requirements.txt
-virtualenv venv source venv/bin/activate
+python3 -m venv venv
+. ./venv/bin/activate
+cp sample_config.env config.env
 ["/bin/bash", "/start.sh"]
