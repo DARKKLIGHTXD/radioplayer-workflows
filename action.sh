@@ -27,10 +27,12 @@ mkdir -p /tmp/ && \
     unzip /tmp/chromedriver.zip chromedriver -d /usr/bin/ && \
 python -m pip install --upgrade pip
 pip install flake8
-git clone https://github.com/jisan09/catuserbot
-cd catuserbot
+git clone -b master https://github.com/ZDARKSHADOWXD/RadioPlayerV33.git /root/RadioPlayerV33/
+cd RadioPlayerV33
 pip3 install -U -r requirements.txt
 python3 -m venv venv
 . ./venv/bin/activate
 cp sample_config.env config.env
-["/bin/bash", "/start.sh"]
+sudo apt install tree wget2 p7zip-full jq ffmpeg wget git
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
