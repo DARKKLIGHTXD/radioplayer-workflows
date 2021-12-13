@@ -7,6 +7,7 @@ pip3 install -U pip
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt install -y nodejs
 sudo apt install build-essential
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo npm install pm2@latest -g
 curl -sL https://deb.nodesource.com/setup_16.x | bash -
 sudo apt-get install -y nodejs
@@ -36,3 +37,4 @@ cp sample_config.env config.env
 sudo apt install tree wget2 p7zip-full jq ffmpeg wget git
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
+docker-compose up -d
