@@ -153,7 +153,7 @@ gtts
 
 hachoir==3.1.1
 
-Pillow==8.0
+Pillow==9.0.0
 
 PyLyrics
 
